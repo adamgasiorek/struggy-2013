@@ -1,0 +1,531 @@
+a:10:{s:4:"time";a:1:{s:4:"Adam";i:1373720341;}s:4:"away";a:1:{s:4:"Adam";b:0;}s:4:"gndr";a:1:{s:4:"Adam";s:4:"none";}s:4:"stat";a:1:{s:4:"Adam";s:4:"none";}s:4:"room";a:1:{s:4:"Adam";s:11:"Glowny chat";}s:4:"user";a:1:{s:4:"Adam";d:1373720349.001101016998291015625;}s:4:"pass";a:1:{s:4:"Adam";s:32:"d0e7b521c18b09876cb7693e42880dba";}s:4:"data";a:187:{i:0;s:32:"+
+Glowny chat
+Adam
+none
+none";i:1;s:20:"-
+Glowny chat
+Adam";i:2;s:32:"+
+Glowny chat
+Adam
+none
+none";i:3;s:10:"s
+Adam
+-";i:4;s:20:"-
+Glowny chat
+Adam";i:5;s:32:"+
+Glowny chat
+Adam
+none
+none";i:6;s:10:"s
+Adam
+-";i:7;s:10:"s
+Adam
++";i:8;a:5:{s:4:"time";i:1371974434;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:45:"m
+#9030b0
+none
+none
+Adam
+.
+udalo sie :)";}i:9;s:10:"s
+Adam
+-";i:10;s:20:"-
+Glowny chat
+Adam";i:11;s:32:"+
+Glowny chat
+Adam
+none
+none";i:12;s:10:"s
+Adam
+-";i:13;s:20:"-
+Glowny chat
+Adam";i:14;s:32:"+
+Glowny chat
+Adam
+none
+none";i:15;s:10:"s
+Adam
+-";i:16;s:20:"-
+Glowny chat
+Adam";i:17;s:32:"+
+Glowny chat
+Adam
+none
+none";i:18;a:5:{s:4:"time";i:1371976294;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:41:"m
+#507030
+none
+none
+Adam
+.
+siemanko";}i:19;s:10:"s
+Adam
+-";i:20;s:20:"-
+Glowny chat
+Adam";i:21;s:32:"+
+Glowny chat
+Adam
+none
+none";i:22;s:10:"s
+Adam
+-";i:23;s:20:"-
+Glowny chat
+Adam";i:24;s:32:"+
+Glowny chat
+Adam
+none
+none";i:25;s:10:"s
+Adam
+-";i:26;s:20:"-
+Glowny chat
+Adam";i:27;s:32:"+
+Glowny chat
+Adam
+none
+none";i:28;s:10:"s
+Adam
+-";i:29;s:20:"-
+Glowny chat
+Adam";i:30;s:32:"+
+Glowny chat
+Adam
+none
+none";i:31;s:20:"-
+Glowny chat
+Adam";i:32;s:32:"+
+Glowny chat
+Adam
+none
+none";i:33;s:10:"s
+Adam
+-";i:34;s:20:"-
+Glowny chat
+Adam";i:35;s:32:"+
+Glowny chat
+Adam
+none
+none";i:36;s:10:"s
+Adam
+-";i:37;s:20:"-
+Glowny chat
+Adam";i:38;s:32:"+
+Glowny chat
+Adam
+none
+none";i:39;s:10:"s
+Adam
+-";i:40;s:20:"-
+Glowny chat
+Adam";i:41;s:32:"+
+Glowny chat
+Adam
+none
+none";i:42;s:10:"s
+Adam
+-";i:43;s:20:"-
+Glowny chat
+Adam";i:44;s:32:"+
+Glowny chat
+Adam
+none
+none";i:45;s:10:"s
+Adam
+-";i:46;s:20:"-
+Glowny chat
+Adam";i:47;s:32:"+
+Glowny chat
+Adam
+none
+none";i:48;s:10:"s
+Adam
+-";i:49;s:20:"-
+Glowny chat
+Adam";i:50;s:32:"+
+Glowny chat
+Adam
+none
+none";i:51;s:10:"s
+Adam
+-";i:52;s:20:"-
+Glowny chat
+Adam";i:53;s:32:"+
+Glowny chat
+Adam
+none
+none";i:54;s:20:"-
+Glowny chat
+Adam";i:55;s:32:"+
+Glowny chat
+Adam
+none
+none";i:56;s:10:"s
+Adam
+-";i:57;s:20:"-
+Glowny chat
+Adam";i:58;s:32:"+
+Glowny chat
+Adam
+none
+none";i:59;s:20:"-
+Glowny chat
+Adam";i:60;s:32:"+
+Glowny chat
+Adam
+none
+none";i:61;s:10:"s
+Adam
+-";i:62;s:20:"-
+Glowny chat
+Adam";i:63;s:32:"+
+Glowny chat
+Adam
+none
+none";i:64;s:10:"s
+Adam
+-";i:65;s:20:"-
+Glowny chat
+Adam";i:66;s:32:"+
+Glowny chat
+Adam
+none
+none";i:67;s:20:"-
+Glowny chat
+Adam";i:68;s:32:"+
+Glowny chat
+Adam
+none
+none";i:69;s:20:"-
+Glowny chat
+Adam";i:70;s:32:"+
+Glowny chat
+Adam
+none
+none";i:71;s:10:"s
+Adam
+-";i:72;s:20:"-
+Glowny chat
+Adam";i:73;s:32:"+
+Glowny chat
+Adam
+none
+none";i:74;s:10:"s
+Adam
+-";i:75;s:20:"-
+Glowny chat
+Adam";i:76;s:32:"+
+Glowny chat
+Adam
+none
+none";i:77;s:10:"s
+Adam
+-";i:78;s:20:"-
+Glowny chat
+Adam";i:79;s:32:"+
+Glowny chat
+Adam
+none
+none";i:80;s:20:"-
+Glowny chat
+Adam";i:81;s:32:"+
+Glowny chat
+Adam
+none
+none";i:82;s:10:"s
+Adam
+-";i:83;s:20:"-
+Glowny chat
+Adam";i:84;s:32:"+
+Glowny chat
+Adam
+none
+none";i:85;s:20:"-
+Glowny chat
+Adam";i:86;s:32:"+
+Glowny chat
+Adam
+none
+none";i:87;s:10:"s
+Adam
+-";i:88;s:20:"-
+Glowny chat
+Adam";i:89;s:32:"+
+Glowny chat
+Adam
+none
+none";i:90;s:10:"s
+Adam
+-";i:91;s:20:"-
+Glowny chat
+Adam";i:92;s:32:"+
+Glowny chat
+Adam
+none
+none";i:93;s:10:"s
+Adam
+-";i:94;s:20:"-
+Glowny chat
+Adam";i:95;s:32:"+
+Glowny chat
+Adam
+none
+none";i:96;s:10:"s
+Adam
+-";i:97;s:20:"-
+Glowny chat
+Adam";i:98;s:32:"+
+Glowny chat
+Adam
+none
+none";i:99;s:20:"-
+Glowny chat
+Adam";i:100;s:32:"+
+Glowny chat
+Adam
+none
+none";i:101;s:20:"-
+Glowny chat
+Adam";i:102;s:32:"+
+Glowny chat
+Adam
+none
+none";i:103;s:20:"-
+Glowny chat
+Adam";i:104;s:32:"+
+Glowny chat
+Adam
+none
+none";i:105;s:20:"-
+Glowny chat
+Adam";i:106;s:32:"+
+Glowny chat
+Adam
+none
+none";i:107;s:20:"-
+Glowny chat
+Adam";i:108;s:32:"+
+Glowny chat
+Adam
+none
+none";i:109;s:20:"-
+Glowny chat
+Adam";i:110;s:32:"+
+Glowny chat
+Adam
+none
+none";i:111;s:20:"-
+Glowny chat
+Adam";i:112;s:32:"+
+Glowny chat
+Adam
+none
+none";i:113;s:10:"s
+Adam
+-";i:114;s:20:"-
+Glowny chat
+Adam";i:115;s:32:"+
+Glowny chat
+Adam
+none
+none";i:116;s:10:"s
+Adam
+-";i:117;s:20:"-
+Glowny chat
+Adam";i:118;s:32:"+
+Glowny chat
+Adam
+none
+none";i:119;s:20:"-
+Glowny chat
+Adam";i:120;s:32:"+
+Glowny chat
+Adam
+none
+none";i:121;s:10:"s
+Adam
+-";i:122;s:20:"-
+Glowny chat
+Adam";i:123;s:32:"+
+Glowny chat
+Adam
+none
+none";i:124;s:10:"s
+Adam
+-";i:125;s:20:"-
+Glowny chat
+Adam";i:126;s:32:"+
+Glowny chat
+Adam
+none
+none";i:127;s:10:"s
+Adam
+-";i:128;s:20:"-
+Glowny chat
+Adam";i:129;s:32:"+
+Glowny chat
+Adam
+none
+none";i:130;s:20:"-
+Glowny chat
+Adam";i:131;s:32:"+
+Glowny chat
+Adam
+none
+none";i:132;s:20:"-
+Glowny chat
+Adam";i:133;s:32:"+
+Glowny chat
+Adam
+none
+none";i:134;s:20:"-
+Glowny chat
+Adam";i:135;s:32:"+
+Glowny chat
+Adam
+none
+none";i:136;s:20:"-
+Glowny chat
+Adam";i:137;s:32:"+
+Glowny chat
+Adam
+none
+none";i:138;s:20:"-
+Glowny chat
+Adam";i:139;s:32:"+
+Glowny chat
+Adam
+none
+none";i:140;s:10:"s
+Adam
+-";i:141;s:20:"-
+Glowny chat
+Adam";i:142;s:32:"+
+Glowny chat
+Adam
+none
+none";i:143;s:20:"-
+Glowny chat
+Adam";i:144;s:32:"+
+Glowny chat
+Adam
+none
+none";i:145;s:20:"-
+Glowny chat
+Adam";i:146;s:32:"+
+Glowny chat
+Adam
+none
+none";i:147;s:20:"-
+Glowny chat
+Adam";i:148;s:32:"+
+Glowny chat
+Adam
+none
+none";i:149;s:10:"s
+Adam
+-";i:150;s:20:"-
+Glowny chat
+Adam";i:151;s:32:"+
+Glowny chat
+Adam
+none
+none";i:152;s:20:"-
+Glowny chat
+Adam";i:153;s:32:"+
+Glowny chat
+Adam
+none
+none";i:154;s:20:"-
+Glowny chat
+Adam";i:155;s:32:"+
+Glowny chat
+Adam
+none
+none";i:156;s:20:"-
+Glowny chat
+Adam";i:157;s:32:"+
+Glowny chat
+Adam
+none
+none";i:158;s:20:"-
+Glowny chat
+Adam";i:159;s:32:"+
+Glowny chat
+Adam
+none
+none";i:160;s:20:"-
+Glowny chat
+Adam";i:161;s:32:"+
+Glowny chat
+Adam
+none
+none";i:162;s:20:"-
+Glowny chat
+Adam";i:163;s:32:"+
+Glowny chat
+Adam
+none
+none";i:164;s:20:"-
+Glowny chat
+Adam";i:165;s:32:"+
+Glowny chat
+Adam
+none
+none";i:166;s:20:"-
+Glowny chat
+Adam";i:167;s:32:"+
+Glowny chat
+Adam
+none
+none";i:168;s:20:"-
+Glowny chat
+Adam";i:169;s:32:"+
+Glowny chat
+Adam
+none
+none";i:170;s:20:"-
+Glowny chat
+Adam";i:171;s:32:"+
+Glowny chat
+Adam
+none
+none";i:172;s:20:"-
+Glowny chat
+Adam";i:173;s:32:"+
+Glowny chat
+Adam
+none
+none";i:174;s:10:"s
+Adam
+-";i:175;s:20:"-
+Glowny chat
+Adam";i:176;s:32:"+
+Glowny chat
+Adam
+none
+none";i:177;s:20:"-
+Glowny chat
+Adam";i:178;s:32:"+
+Glowny chat
+Adam
+none
+none";i:179;s:20:"-
+Glowny chat
+Adam";i:180;s:32:"+
+Glowny chat
+Adam
+none
+none";i:181;s:10:"s
+Adam
+-";i:182;s:20:"-
+Glowny chat
+Adam";i:183;s:32:"+
+Glowny chat
+Adam
+none
+none";i:184;s:10:"s
+Adam
+-";i:185;s:20:"-
+Glowny chat
+Adam";i:186;s:32:"+
+Glowny chat
+Adam
+none
+none";}s:4:"kick";a:0:{}s:4:"mute";a:0:{}}

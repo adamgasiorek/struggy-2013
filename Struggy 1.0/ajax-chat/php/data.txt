@@ -1,0 +1,121 @@
+a:10:{s:4:"time";a:1:{s:4:"Adam";i:1373720486;}s:4:"away";a:1:{s:4:"Adam";b:0;}s:4:"gndr";a:1:{s:4:"Adam";s:4:"none";}s:4:"stat";a:1:{s:4:"Adam";s:4:"none";}s:4:"room";a:1:{s:4:"Adam";s:11:"Glowny chat";}s:4:"user";a:1:{s:4:"Adam";d:1373720498.6961739063262939453125;}s:4:"pass";a:1:{s:4:"Adam";s:32:"a072c9a7f1afa9e3f5ac1a273d6798a8";}s:4:"data";a:39:{i:1;a:5:{s:4:"time";i:1370955427;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:38:"m
+#70b0d0
+none
+none
+Adam
+.
+siema";}i:2;s:20:"-
+Glowny chat
+Adam";i:3;s:32:"+
+Glowny chat
+Adam
+none
+none";i:4;s:10:"s
+Adam
+-";i:5;s:20:"-
+Glowny chat
+Adam";i:6;s:32:"+
+Glowny chat
+Adam
+none
+none";i:7;a:5:{s:4:"time";i:1370955907;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:46:"m
+#70b0d0
+none
+none
+Adam
+.
+sdkacazgi&gt;";}i:8;a:5:{s:4:"time";i:1370955914;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:35:"m
+#70b0d0
+none
+none
+Adam
+.
+fa";}i:9;s:10:"s
+Adam
+-";i:10;s:20:"-
+Glowny chat
+Adam";i:11;s:32:"+
+Glowny chat
+Adam
+none
+none";i:12;s:10:"s
+Adam
+-";i:13;s:20:"-
+Glowny chat
+Adam";i:14;s:32:"+
+Glowny chat
+Adam
+none
+none";i:15;s:10:"s
+Adam
+-";i:16;s:20:"-
+Glowny chat
+Adam";i:17;s:32:"+
+Glowny chat
+Adam
+none
+none";i:18;a:5:{s:4:"time";i:1371376259;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:38:"m
+#3050d0
+none
+none
+Adam
+.
+siema";}i:19;s:10:"s
+Adam
+-";i:20;s:20:"-
+Glowny chat
+Adam";i:21;s:32:"+
+Glowny chat
+Adam
+none
+none";i:22;s:10:"s
+Adam
+-";i:23;s:10:"s
+Adam
++";i:24;a:5:{s:4:"time";i:1371383458;s:4:"room";s:11:"Glowny chat";s:4:"user";s:4:"Adam";s:4:"priv";s:1:".";s:4:"data";s:43:"m
+#3050d0
+none
+none
+Adam
+.
+%%unsure%%";}i:25;s:10:"s
+Adam
+-";i:26;s:20:"-
+Glowny chat
+Adam";i:27;s:32:"+
+Glowny chat
+Adam
+none
+none";i:28;s:10:"s
+Adam
+-";i:29;s:20:"-
+Glowny chat
+Adam";i:30;s:32:"+
+Glowny chat
+Adam
+none
+none";i:31;s:10:"s
+Adam
+-";i:32;s:20:"-
+Glowny chat
+Adam";i:33;s:32:"+
+Glowny chat
+Adam
+none
+none";i:34;s:10:"s
+Adam
+-";i:35;s:20:"-
+Glowny chat
+Adam";i:36;s:32:"+
+Glowny chat
+Adam
+none
+none";i:37;s:10:"s
+Adam
+-";i:38;s:20:"-
+Glowny chat
+Adam";i:39;s:32:"+
+Glowny chat
+Adam
+none
+none";}s:4:"kick";a:0:{}s:4:"mute";a:0:{}}

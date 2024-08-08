@@ -1,0 +1,77 @@
+<html>
+	<head>
+<style >
+body
+{
+	background-size: 100% 100%;
+}
+
+    div#loading {margin-left: 35%;margin-top: 3%;width:30%; height:10px; background:#333366; overflow:hidden}
+    div#pasekPostepu {width:0%; height:100%; background:#3366CC; overflow:hidden}
+</style>
+	</head>
+	<body background="ladowanie.jpg">
+		<center>
+
+	
+
+ 
+<script type="text/javascript">
+//tablica z nazwami obrazków do załadowania
+var nazwyObrazkow = [
+    '1.jpg',
+    '2.jpg',
+    'adacho.jpg',
+    'chlop.gif',
+    'ladowanie.jpg',
+    'tloo.jpg'
+];
+var ile_zaladowano = 0; //ile obiektów Images już załadowano do pamięci
+var szerokosc_przeskoku = (100/nazwyObrazkow.length); //szerokość oznaczająca % paska po załadowaniu 1 obrazka
+var obr = []; //tablica będzie zawierała obiekty Image
+var div = null; //zmienna pod którą utworzymy dynamicznie div zawierającego div-pasek postępu
+var pasek = null; //zmienna pod którą utworzymy dynamicznie div-pasek postępu
+var strona = 'home.php'; //strona na którą przeniesie po zakończonym ładowaniu
+ 
+ 
+//funkcja rozpoczynająca ładowanie obrazków
+function start_Loading() {
+    div = document.createElement('div');
+    div.id = 'loading';             //dzięki temu skorzystamy ze zdefiniowanych styli
+    pasek = document.createElement('div');
+    pasek.id = 'pasekPostepu';
+    div.appendChild(pasek);         //wstawiamy div-pasek postępu do diva
+    document.getElementsByTagName('body')[0].appendChild(div);      //wstawiamy div na końcu body
+ 
+    for(var x=0; x<nazwyObrazkow.length; x++) {      //pętla po nazwach obrazków...
+        obr[x] = new Image();
+        obr[x].onload = ustawPasek;         //dla każdego obiektu ustawiamy zdarznie onload
+        obr[x].src = nazwyObrazkow[x];          
+    }
+}
+ 
+ 
+//funkcja odpalana dla każdego obiektu Image, które wcześniej stworzyliśmy. Sprawdza ile obiektów zostało załadowanych i ustawia odpowiednią szerokość paska
+function ustawPasek() {
+    ile_zaladowano++;
+    pasek.style.width = ile_zaladowano * szerokosc_przeskoku + "%"; //zmianiamy szerokość paska (podaną w %)
+     
+    if (ile_zaladowano >= nazwyObrazkow.length) {
+        setTimeout("location.href='"+strona+"'", 2000) //po załadowaniu wszystkich grafik czekamy 2s i przenosimy na stronę
+    }
+}
+ 
+window.onload = start_Loading; //odpalamy funkcję start_Loadingu
+</script>
+
+
+
+</center>
+	</body>
+</html>
+
+
+
+
+
+

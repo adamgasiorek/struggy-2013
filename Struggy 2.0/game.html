@@ -1,0 +1,347 @@
+<html>
+	<head>
+		<title>Test - Socket</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<style>
+			#PLANSZA_GRY {
+				width: 700px;
+				height: 800px;
+				position: absolute;
+			}
+			#DOLNY_PANEL {
+				min-width: 476px;
+				min-height: 92px;
+				top: 76%;
+				height: 24%;
+				width: 79.8%;
+				position: absolute;
+				background: #ffffff;
+			}
+			#GORNY_PANEL {
+				height: 5%;
+				width: 18.5%;
+				min-width: 125px;
+				position: absolute;
+				top: 2.5%;
+				right: 0.2%;
+			}
+			#PASEK {
+				width: 100%;
+				height: 2%;
+				position: absolute;
+				top: 0%;
+				right: 0%;
+				background-color: 2F4F4F;
+				z-index: 1;
+			}
+			#PANEL {
+				height: 75%;
+				width: 18.5%;
+				min-width: 125px;
+				position: absolute;
+				top: 8.5%;
+				right: 0.2%;
+				left: auto;
+			}
+			#MOJE_LOGO {
+				height: 13%;
+				width: 18.5%;
+				min-width: 125px;
+				min-height: 50px;
+				position: absolute;
+				right: 0.2%;
+				top: 84.5%;
+			}
+			#map {
+
+				position: absolute;
+				min-width: 480px;
+				min-height: 300px;
+				width: 80%;
+				height: 74%;
+				top: 2%;
+				border: 1px solid black;
+				overflow: scroll;
+				overflow-y: hidden;
+			}
+			#ramka {
+
+				position: absolute;
+				min-width: 480px;
+				width: 80%;
+				height: 72%;
+				top: 2%;
+				border: 1px solid black;
+				overflow: scroll;
+			}
+
+		</style>
+
+		<script>
+			window.onload = function() {
+				var panel = document.getElementById("DOLNY_PANEL");
+				var mapa = document.getElementById("map");
+				var tloo = document.getElementById("tlo");
+				var socket = io.connect('http://localhost:3250');
+
+				panel.innerHTML = 'Witaj na placu glownym';
+
+				socket.on('connect', function() {
+					socket.emit('room', 'plac');
+				});
+
+				socket.on('dodawajELEMENTY', function(data) {
+					if (data == 'plac') {
+						var drzwi = document.createElement('img');
+						drzwi.src = "http://img59.imageshack.us/img59/8462/44wf.jpg";
+						drzwi.id = "sklepik";
+						drzwi.style.position = "absolute";
+						drzwi.style.left = "530%";
+						drzwi.style.top = "31%";
+						drzwi.style.height = "12%";
+						drzwi.style.width = "3.5%";
+						drzwi.style.zIndex = "11";
+						mapa.appendChild(drzwi);
+						var sklepik = document.getElementById("sklepik");
+						sklepik.onclick = function() {	
+							
+							var element = document.getElementById("sklepik");
+							element.parentNode.removeChild(element);					
+							socket.emit('room', 'sklepik');
+						}
+						
+					}
+					if (data == 'sklepik') {						
+												
+						tloo.src = 'http://img38.imageshack.us/img38/7707/jtkf.jpg';
+						tloo.style.width = '200%';
+						tloo.style.height = '100%';
+						var drzwi = document.createElement('img');
+						drzwi.src = "http://img59.imageshack.us/img59/8462/44wf.jpg";
+						drzwi.id = "sklepik";
+						drzwi.style.position = "absolute";
+						drzwi.style.left = "150%";
+						drzwi.style.top = "43%";
+						drzwi.style.height = "20%";
+						drzwi.style.zIndex = "11";
+						mapa.appendChild(drzwi);
+						var sklepik = document.getElementById("sklepik");
+						sklepik.onclick = function() {
+							
+							tloo.src = 'http://img38.imageshack.us/img38/7707/jtkf.jpg';
+							tloo.style.width = '200%';
+							tloo.style.height = '100%';
+							
+							socket.emit('room', 'plac');
+						}
+					}
+
+				});
+
+				socket.on("dodajMojaPostac", function(data) {
+
+					///// MOJA POSTAC ///////
+					mapa.scrollLeft = 0.33 * tloo.offsetWidth;
+					var postac = document.createElement('img');
+					postac.src = "http://localhost:8080/postac.gif";
+					postac.id = data.id;
+					postac.style.height = '11%';
+					postac.style.width = '5.5%';
+					postac.style.marginLeft = data.pozycjaX / 100 * mapa.offsetWidth + "px";
+					postac.style.marginTop = data.pozycjaY / 100 * mapa.offsetHeight + "px";
+					postac.style.position = "absolute";
+					postac.style.zIndex = 10;
+
+					mapa.appendChild(postac);
+
+					var tablicaKluczy = [];
+					var klawisze = [];
+
+					document.onkeydown = function(e) {
+						var kluczKlawisza = e.keyCode ? e.keyCode : e.which;
+						klawisze[kluczKlawisza] = kluczKlawisza;
+						var tablicaKluczy = zamieniajnaliczby(klawisze)
+						socket.emit("odbierzKluczKlawisza", {
+							klucze : keyDown(tablicaKluczy),
+							id : postac.id
+						});
+
+					}
+					document.onkeyup = function(e) {
+						var kluczKlawisza = e.keyCode ? e.keyCode : e.which;
+
+						klawisze[kluczKlawisza] = false;
+						tablicaKluczy = zamieniajnaliczby(klawisze);
+						socket.emit("odbierzKluczKlawisza", {
+							klucze : keyDown(tablicaKluczy),
+							id : postac.id
+						});
+					}
+					function zamieniajnaliczby(tablica) {
+						var nowaTablica = new Array();
+						for (var i = 0; i < tablica.length; i++) {
+							if ( typeof tablica[i] == "number") {
+								nowaTablica[nowaTablica.length] = tablica[i];
+							}
+						}
+						return nowaTablica;
+					}
+
+					function keyDown(tablica) {
+						var szybkosc = 0.2;
+						// SZYBKOSC TUTAJ
+						if (tablica.indexOf(37) > -1 && tablica.indexOf(38) > -1) {
+							return [-szybkosc, -szybkosc];
+						} else if (tablica.indexOf(37) > -1 && tablica.indexOf(40) > -1) {
+							return [-szybkosc, szybkosc];
+						} else if (tablica.indexOf(39) > -1 && tablica.indexOf(38) > -1) {
+							return [szybkosc, -szybkosc];
+						} else if (tablica.indexOf(39) > -1 && tablica.indexOf(40) > -1) {
+							return [szybkosc, szybkosc];
+						} else if (tablica.indexOf(38) > -1) {
+							return [0, -szybkosc];
+						} else if (tablica.indexOf(40) > -1) {
+							return [0, szybkosc];
+						} else if (tablica.indexOf(37) > -1) {
+							return [-szybkosc, 0];
+						} else if (tablica.indexOf(39) > -1) {
+							return [szybkosc, 0];
+						}
+					}
+
+				});
+
+				socket.on("listaPostaci", function(data) {
+
+					for (var i = 0; i < data.length; i++) {
+						var element = document.createElement('img');
+						element.src = 'http://img11.imageshack.us/img11/4665/66t.gif';
+						element.id = data[i].id;
+						element.style.position = "absolute";
+						element.style.height = "11%";
+						element.style.width = "5.5%";
+						element.style.marginLeft = (data[i].pozycjaX) * parseFloat(mapa.offsetWidth) + "px";
+						element.style.marginTop = (data[i].pozycjaY) * parseFloat(mapa.offsetHeight) + "px";
+						element.style.zIndex = 1;
+						mapa.appendChild(element);
+					};
+
+				});
+
+				socket.on("dodajINNYMmojaPostac", function(data) {
+					var postac = document.createElement('img');
+					postac.src = 'http://img259.imageshack.us/img259/4127/jfsp.gif';
+					postac.id = data.id;
+					postac.style.marginLeft = data.pozycjaX / 100 * parseFloat(mapa.offsetWidth) + "px";
+					postac.style.marginTop = data.pozycjaY / 100 * parseFloat(mapa.offsetHeight) + "px";
+					postac.style.position = "absolute";
+					postac.style.height = "11%";
+					postac.style.width = "5.5%";
+
+					mapa.appendChild(postac);
+
+				});
+
+				socket.on("leave", function(data) {
+					var element = document.getElementById(data.id);
+					if (element)
+						element.parentNode.removeChild(element);
+				});
+
+				socket.on('przewin', function(data) {
+
+					setTimeout(function() {
+						for (var i = 0; i < 3; i++) {
+							var pozycja = parseFloat(data.pozycja[0]) / 100;
+
+							pozycja = ((pozycja) * parseFloat(tloo.offsetWidth)) / 10;
+
+							mapa.scrollLeft = parseFloat(mapa.scrollLeft) + pozycja;
+						};
+
+					}, 1500);
+
+				});
+
+				socket.on("zmienPozycjePostaci", function(data) {
+					var zmienianaPostac = document.getElementById(data.id);
+
+					var dodawajX = parseInt(data.pozycjee[0] / 1000 * tloo.offsetWidth) * 1.1;
+					var dodawajY = parseInt(data.pozycjee[1] / 100 * tloo.offsetHeight) * 1.1;
+
+					var pozy = parseFloat(zmienianaPostac.style.marginTop) / parseFloat(tloo.offsetHeight);
+					var pozx = parseFloat(zmienianaPostac.style.marginLeft) / parseFloat(tloo.offsetWidth);
+
+					if ((pozy > (-0.45)) && (pozy < (-0.135)) && (pozx > (0.03)) && (pozx < (0.95))) {
+						for (var i = 0; i < 3; i++) {
+							zmienianaPostac.style.marginLeft = parseInt(zmienianaPostac.style.marginLeft) + dodawajX + "px";
+							zmienianaPostac.style.marginTop = parseInt(zmienianaPostac.style.marginTop) + dodawajY + "px";
+						}
+
+					} else if (pozy < (-0.45)) {
+						zmienianaPostac.style.marginTop = parseInt(zmienianaPostac.style.marginTop) + +1 + "px";
+					} else if (pozy > (-0.135)) {
+						zmienianaPostac.style.marginTop = parseInt(zmienianaPostac.style.marginTop) + -1 + "px";
+					} else if (pozx < (0.03)) {
+						zmienianaPostac.style.marginLeft = parseInt(zmienianaPostac.style.marginLeft) + 1 + "px";
+					} else if (pozx > (0.95)) {
+						zmienianaPostac.style.marginLeft = parseInt(zmienianaPostac.style.marginLeft) + -1 + "px";
+					}
+
+					socket.emit("edytujListe", {
+						X : parseFloat(zmienianaPostac.style.marginLeft) / parseFloat(mapa.offsetWidth),
+						Y : parseFloat(zmienianaPostac.style.marginTop) / parseFloat(mapa.offsetHeight),
+						id : data.id
+					})
+
+				});
+
+				socket.on("dupa", function(data) {
+					panel.innerHTML = data;
+				});
+
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="WSZYTKIE TE DIVY TUTAJ">
+			<div id="PASEK" style="text-align: right;padding-right:0.5%;letter-spacing: 1">
+				<a style="text-decoration: none;color:#C0C0C0;font-size: 90%;" href="index.php">(Wyloguj)</a>
+			</div>
+
+			<div id="map">
+
+				<!----------- TU DODAJEMY ELEMENTY !!! -------->
+
+				<!--- tlo --->
+				<img id="tlo" src="http://localhost:8080/image.jpg" style="height:100%;margin-left: 0;margin-top: 0;"/>
+
+			</div>
+
+		</div>
+
+		<img id="ramka" src="http://img42.imageshack.us/img42/9547/j9v.gif" style="z-index: 10;"/>
+
+		<div style="border-style: solid" id="DOLNY_PANEL" name="DOLNYPANEL">
+			CZAT I INNE PIERDOLY
+		</div>
+
+		<div style="border-style: solid" id="GORNY_PANEL">
+
+		</div>
+
+		<div style="border-style: solid" id="PANEL">
+			<img src="panel.jpg" width="100%" height="100%" />
+		</div>
+
+		<div style="border-style: solid" id="MOJE_LOGO">
+			<img src="adacho.jpg" width="100%" height="100%" />
+		</div>
+
+	</body>
+</html>
